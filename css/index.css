@@ -211,17 +211,17 @@ footer {
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
     header {
         flex-direction: column;
     }
 
     nav {
-        padding: 10px 0px;
+        padding: 1.5rem 1rem;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
     .contenedor-todo {
         flex-wrap: wrap;
     }
