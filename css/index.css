@@ -1,5 +1,6 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    background-color: antiquewhite;
     margin: 0;
 }
 
@@ -15,6 +16,7 @@ header {
 h2 {
     display: flex;
     margin-left: auto;
+    text-align: center;
 }
 
 .logo {    
@@ -71,6 +73,7 @@ nav a:hover {
 
 .carrousel .img {
     width: calc(100 / 3);
+    display: flex;
     min-height: 10vh;
     background: lime;
 }
@@ -93,6 +96,7 @@ nav a:hover {
 h1 {
     padding: 1em;
     text-align: center;
+    text-decoration: underline;
 }
 
 section {
@@ -118,18 +122,24 @@ section {
    text-align:justify;
    padding: 15px 20px;
    margin: 20px 10px;
+   display:flex;
+   flex-wrap: wrap;
+   height: auto;
    
   }
   
 div p::first-letter{font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
 
  
+div p{
+    font-family:'Work Sans', sans-serif;
+    font-weight:bold;
+}
 
-
-h3{
+.h3{
     text-align: center;
     text-decoration: underline;
-    font-family:sans-serif black;
+    font-family: 'Work Sans', sans-serif;
   }
 
 
@@ -144,6 +154,10 @@ footer {
     width: 100%;
     max-width: 1200px;
     margin: auto;
+    display: flex;
+    flex-wrap:wrap ;
+    flex-direction: row;
+    height: auto;
     background: black;
 }
 
@@ -210,19 +224,31 @@ footer {
     color: gray;
 }
 
+.seccion img{
+    display: flex;
+}
 
 @media screen and (max-width: 720px) {
     header {
         flex-direction: column;
+    
     }
 
     nav {
         padding: 1.5rem 1rem;
     }
+
+    
 }
 
-@media screen and (max-width: 720px) {
-    .contenedor-todo {
-        flex-wrap: wrap;
+
+@media screen and (max-width: 600px) {
+    div p {
+        flex-direction: column;
+        flex-wrap: nowrap;
     }
+    
+    footer {
+        flex-direction: column;
+            }
 }
