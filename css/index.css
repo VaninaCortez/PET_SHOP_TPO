@@ -154,16 +154,15 @@ footer {
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    display: flex;
-    flex-wrap:wrap ;
-    flex-direction: row;
     height: auto;
     background: black;
 }
 
 .contenedor {
     display: flex;
+    column-gap: 1rem;
     justify-content: space-between;
+   
 }
 
 .columna1 {
@@ -192,15 +191,25 @@ footer {
 
 .columna2 {
     max-width: 400px;
+    
 }
 
 .columna2 h1 {
     font-size: 20px;
+    text-align: center;
     color: gray;
+}
+
+.columna2 img{
+    display: block;
+    column-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .columna3 {
     max-width: 400px;
+    align-items: inherit;
 }
 
 .columna3 h2 {
@@ -210,6 +219,12 @@ footer {
 .columna3 .fila3 {
     margin-top: 20px;
     display: flex;
+    align-items: unset;
+}
+
+.columna3 img{
+    display: block;
+    align-content: center;
 }
 
 .fila3 img {
@@ -269,4 +284,8 @@ footer {
         flex-direction: column;
         align-items: center;
             }
+    
+    .centrar{
+        flex-direction: column;
+    }
 }
