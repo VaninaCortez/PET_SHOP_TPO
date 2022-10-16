@@ -1,0 +1,304 @@
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: antiquewhite;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    min-width: none;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    display: flex;
+    margin-left: auto;
+    text-align: center;
+}
+
+.logo {    
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.logo img {
+    height: 90px;
+    margin-right: 10px;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 20px;
+    color: whitesmoke;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: gray;
+}
+
+.iconosredes {
+    margin: 0 0 0 52px;
+    width: 40;
+}
+
+
+.carrousel {
+    width: 90%;
+    max-width: 120cm;
+    background-color: lightblue;
+}
+
+.carrousel .grande {
+    width: 200%;
+    background-color: orange;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: all .5s ease;
+    transform: translate(0-50%);
+}
+
+.carrousel .img {
+    width: calc(100 / 3);
+    display: flex;
+    min-height: 10vh;
+    background: lime;
+}
+.carrousel .puntos {
+    width: 100%;
+    background-color: red;
+    padding: 1em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrousel .punto {
+    width: 2em;
+    height: 2em;
+    background-color: blue;
+}
+
+h1 {
+    padding: 1em;
+    text-align: center;
+    text-decoration: underline;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.tarjeta {
+    width: 33%;
+}
+.estilo-a {
+     font-family: sans-serif;
+}
+
+.estilo-a a{
+    text-decoration: none;
+    color: black;
+}
+
+.centrar{
+   text-align:justify;
+   padding: 15px 20px;
+   margin: 20px 10px;
+   display:flex;
+   flex-wrap: wrap;
+   align-items: center;
+   width: 100%;
+   height: auto;
+   
+  }
+  
+div p::first-letter{font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+
+ 
+div p{
+    font-family:'Work Sans', sans-serif;
+    font-weight:bold;
+   
+}
+
+div h3{
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Work Sans', sans-serif;
+  }
+
+.seccion img{
+    display: block;
+    width: 60%;
+    margin: auto;
+    
+}
+
+
+
+footer {
+    width: 100%;
+    background: black;
+    color: whitesmoke;
+    padding: 20px;
+}
+
+.contenedor-todo {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    height: auto;
+    background: black;
+}
+
+.contenedor {
+    display: flex;
+    column-gap: 1rem;
+    justify-content: space-between;
+   
+}
+
+    
+
+
+
+.columna1 {
+    max-width: 400px;
+}
+
+.columna1 h2 {
+    font-size: 22px;
+}
+
+.columna1 .fila {
+    margin-top: 20px;
+    display: flex;
+}
+
+.fila img {
+   width: 26px;
+   height: 26px; 
+}
+
+.fila label {
+    margin-top: 5px;
+    margin-left: 20px;
+    color: gray;
+}
+
+.columna2 {
+    max-width: 400px;
+    
+}
+
+.columna2 h1 {
+    font-size: 20px;
+    text-align: center;
+    color: gray;
+}
+
+.columna2 img{
+    display: block;
+    column-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.columna3 {
+    max-width: 400px;
+    align-items: inherit;
+}
+
+.columna3 h2 {
+    font-size: 22px;
+}
+
+.columna3 .fila3 {
+    margin-top: 20px;
+    display: flex;
+    align-items: unset;
+}
+
+.columna3 img{
+    display: block;
+    align-content: center;
+}
+
+.fila3 img {
+    width: 26px;
+    height: 26px;
+}
+
+.fila3 label {
+    margin-top: 5px;
+    margin-left: 20px;
+    max-width: 160px;
+    color: gray;
+}
+
+
+.map-responsive {
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+    
+    }
+    
+.map-responsive iframe{
+       left:0;
+       top:0;
+       height:100%;
+       width:100%;
+       position:absolute;
+    
+    }   
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    
+    }
+
+    nav {
+        padding: 1.5rem 1rem;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 576px) {
+    div p {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+            }
+    
+    .centrar{
+        flex-direction: column;
+    }
+}
