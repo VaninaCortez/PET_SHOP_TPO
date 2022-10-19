@@ -72,59 +72,41 @@ nav a:hover {
     border-radius: 10px;
 }
 
-.container-faq .item-faq  .question {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(43,51,122,.2);
-    padding: 20px 20px 20px 80px;
-    transition: .4s;
-}
-
-.container-faq .item-faq  .question .more {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 15px -1px rgba(0,0,0,.2);
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
+.accordion {
+    background-color: #eee;
+    color: #444;
     cursor: pointer;
-    transition: .4s;
-}
-
-.container-faq .item-faq  .question .more:hover {
-    box-shadow: 0 0 15px -1px rgba(0,0,0,.4);
-}
-
-.container-faq .item-faq  .question span{
-    position: absolute;
-    left: 10px;
-    font-size: 3rem;
-    opacity: .1;
-}
-
-.container-faq .item-faq  .answer {
-    position: relative;
-    padding: 0 20px 0 80px;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
     overflow: hidden;
-    height: 0;
-    transition: .4s;
-}
+    transition: max-height 0.2s ease-out;
+  }
 
-.container-faq .item-faq  .answer p {
-    font-size: 1.3rem;
-}
-
-.container-faq .item-faq  .answer span {
-    position: absolute;
-    left: 10px;
-    font-size: 3rem;
-    top: -10px;
-    opacity: .2;
-}
-
+  .accordion:after {
+    content: '\02795'; 
+    font-size: 13px;
+    color: rgb(252, 52, 175);
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\25b2"; 
+  }
 
 
 
@@ -205,6 +187,24 @@ footer {
     max-width: 160px;
     color: gray;
 }
+
+.map-responsive {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+
+}
+
+.map-responsive iframe{
+   left:0;
+   top:0;
+   height:100%;
+   width:100%;
+   position:absolute;
+
+}
+
 
 @media screen and (max-width: 600px) {
     header {
