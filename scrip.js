@@ -1,6 +1,16 @@
-let question = document.querySelectorAll('.question');
-let btnDropdown = document.querySelectorAll('.questio .more');
-let answer = document.querySelectorAll('.answer');
-let parrafo = document.querySelectorAll('.answer p');
+var acc = document.getElementsByClassName("accordion");
+var i;
 
-for ( let )
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+
+
