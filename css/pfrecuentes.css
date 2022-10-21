@@ -97,7 +97,10 @@ nav a:hover {
   
   .panel {
     padding: 0 18px;
-    background-color: white;
+    background-color: rgb(253, 251, 137);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 18px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
