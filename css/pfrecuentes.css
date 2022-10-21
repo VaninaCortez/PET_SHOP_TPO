@@ -18,6 +18,13 @@ header {
     padding: 20px;
 }
 
+.container-faq img {
+    display: block;
+    column-width: 60%;
+    align-content: center;
+    margin: auto;
+}
+
 h2 {
     display: flex;
     margin-left: auto;
