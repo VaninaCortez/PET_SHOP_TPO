@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Shop +Kotitas | Bienvenidos</title>
+  <link rel="icon" type="image/png" href="IMAGENES/LOGO1.png">
+    
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/formulario.css">
+  <link rel="stylesheet" href="./index.html">
+  <link rel="stylesheet" href="./accesorios.html">
+  <link rel="stylesheet" href="./pfrecuentes.html">
+</head>
+
+<body>
+    <form action="https://formspree.io/f/moqblgbo" method="POST">
+        <span>
+            <i class="fa fa-paper-plane"></i>
+        </span>
+        <h2>Contáctanos</h2>
+        <input type="text" name="Nombre" placeholder="Nombre" required>
+        <input type="text" name="Correo" placeholder="Correo" required>
+        <input type="text" name="Teléfono" placeholder="Teléfono" required>
+        <textarea name="mensaje" placeholder="Escriba aquí su mensaje" required></textarea>
+        <input type="submit" value="ENVIAR" id="boton">
+    </form>
+
+<script>
+    const $form = document.querySelector('#form')
+
+    $form.addEventListener('submit', handleSubmit)
+
+    async function handleSubmit(event) {
+        event.preventDefault()
+        const form = new FormData(this)
+        const response = await fetch(this.action, {
+            method: this.method,
+            body: form,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        if (respnse.ok) {
+            this.reset()
+            alert('Gracias por contactarnos, te escribiremos pronto')
+        }
+    }  
+</script>
+
+</body>
+</html>
