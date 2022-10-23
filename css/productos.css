@@ -40,6 +40,7 @@ nav li {
     height: 80px;
     color: whitesmoke;
     width: 100%;
+    justify-content: space-around;
 }
 
 nav a {
@@ -222,12 +223,11 @@ footer {
         align-items: center;
     }
     
-    ul {
+    .ul {
         width: 100%;
-        display: flex;
         position: fixed;
         height: 100vh;
-        font-size: 16px;
+        font-size: 10px;
         background-color: rgba(99, 98, 100, 0.836);
         top: 80px;
         left: -100%;
@@ -235,17 +235,17 @@ footer {
         transition: all .5s;
     }
        
-    nav ul li{
+    .nav ul li{
         display: block;
         margin: 50px 0;
         line-height: 30px;
     }
 
-    nav ul li a{
-        font-size: 20px;
+    .nav ul li a{
+        font-size: 12px;
     }
 
-    li a:hover, li a.active{
+    .li a:hover, li a.active{
         background: none;
         color: blueviolet;
     }
