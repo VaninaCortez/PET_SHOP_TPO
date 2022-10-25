@@ -1,4 +1,5 @@
 *{
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
@@ -12,52 +13,63 @@ header {
     display: flex;
     min-height: 150px;
     background-color: black;
-    justify-content: space-between;
     align-items: center;
     padding: 20px;
 }
 
 h2 {
-    display: flex;
-    margin-left: auto;
+    margin-block-start: 1px;
+    text-align: left;
+    align-items: flex-start;
 }
 
 .logo {    
     display: flex;
-    align-items: center;
+    align-items: right;
     color: whitesmoke;
 }
 
 .logo img {
-    height: 90px;
-    margin-right: 10px;
+    height: 80px;
+    padding: 10px;
 }
 
-nav li {
-    display: inline;
-    margin: 0 0 0 20px;
+nav ul li {
+    display: inline-block;
     color: whitesmoke;
+    line-height: 80px;
+    margin: 0 5px;
 }
 
-nav a {
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+
+nav ul li a {
     text-transform: uppercase;
     color: whitesmoke;
     text-decoration: none;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
 }
 
-nav a:hover {
-    color: gray;
+li a:hover {
+    background-color: blueviolet;
+    transition: .5s;
 }
 
 .carrousel {
-    width: 90%;
+    width: 100%;
     max-width: 120cm;
     background-color: lightblue;
     margin: 40px;
 }
 
 .carrousel .grande {
-    width: 200%;
+    width: 100%;
     background-color: orange;
     display: flex;
     flex-flow: row nowrap;
@@ -88,15 +100,31 @@ nav a:hover {
     background-color: blue;
 }
 
+
+.checkbtn {
+    font-size: 30px;
+    color: rgb(253, 250, 53);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
 .flex-contenedor {
     border: solid 1px grey;
     background-color: purple;
-    margin: 0.5rem;
+    margin: .5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
     height: auto;
+    padding: 20px;
 }
 
 .titulo {
@@ -288,9 +316,10 @@ footer {
     header {
         flex-direction: column;
     }
-    .flex-contenedor {
+    #contenedor {
         flex-direction: column;
         align-items: center;
+        padding: 0.5px
     }
     
     .item {
@@ -301,4 +330,74 @@ footer {
     .contenedor {
         flex-direction: column;
     }
+
+    .checkbtn{
+        display: block;
+    }
+
+    nav ul {
+        width: 100%;
+        position: fixed;
+        height: 100vh;
+        font-size: 10px;
+        padding: 20px;
+        background-color: rgba(105, 6, 204, 0.836);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+       
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    li a:hover, li a.active{
+        background: none;
+        color: rgb(218, 183, 252);
+    }
+ 
+    .checkbtn{
+        display: block;
+    }
+
+    nav ul {
+        width: 100%;
+        position: fixed;
+        height: 100vh;
+        font-size: 10px;
+        padding: 20px;
+        background-color: rgba(105, 6, 204, 0.836);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+       
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    li a:hover, li a.active{
+        background: none;
+        color: rgb(218, 183, 252);
+    }
+    #check:checked ~ ul{
+        left: 0;
+        position: absolute;
+    }
+     
+
 }
