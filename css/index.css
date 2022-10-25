@@ -317,6 +317,7 @@ footer {
         flex-direction: column;
     }
     #contenedor {
+        position: relative;
         flex-direction: column;
         align-items: center;
         padding: 0.5px
@@ -333,6 +334,7 @@ footer {
 
     .checkbtn{
         display: block;
+        cursor: pointer;
     }
 
     nav ul {
@@ -373,11 +375,13 @@ footer {
         height: 100vh;
         font-size: 10px;
         padding: 20px;
-        background-color: rgba(105, 6, 204, 0.836);
+        background-color: black;
+        color: antiquewhite;
         top: 80px;
         left: -100%;
         text-align: center;
         transition: all .5s;
+        z-index: 1;
     }
        
     nav ul li{
@@ -396,8 +400,8 @@ footer {
     }
     #check:checked ~ ul{
         left: 0;
-        position: absolute;
-    }
-     
 
+        
+    }
+    
 }
